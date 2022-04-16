@@ -19,10 +19,14 @@ int main()
 	int subscript=0;
 	int loopsubscript;
 	int recordnum=1;
+	int prompt;
+	int currentPatient;
+	
+	
 	Patient* patient =new Patient[10];
 	
-	patient[subscript].patient_id=1;
-	while (patient[subscript].patient_id>0)
+	currentPatient=patient[subscript].patient_id;
+	while (currentPatient>0)
 	{
 		cout<<"Please enter patient id or 0 to exit ";
 		cin>>patient[subscript].patient_id;
@@ -59,9 +63,11 @@ int main()
 	   	cout << "\n";
 	   	cout<<"Firstname: "<<patient[loopsubscript].firstname;
 		cout << "\n"<<"\n";
-			recordnum++;
+		recordnum++;
+
 	}
 	 
 	delete[] patient;
+	cin>>prompt;
 	return 0;
 }
